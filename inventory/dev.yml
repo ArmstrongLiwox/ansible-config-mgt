@@ -1,14 +1,14 @@
 [J-NFS]
-172.31.29.51 ansible_ssh_user=ec2-user
+172.31.29.51 ansible_ssh_user='ec2-user'
 
 [J-Web1]
-172.31.23.13 ansible_ssh_user=ec2-user
+172.31.23.13 ansible_ssh_user='ec2-user'
 
 [J-Web2]
-172.31.19.199 ansible_ssh_user=ec2-user
+172.31.19.199 ansible_ssh_user='ec2-user'
 
 [J-DB]
-172.31.20.112 ansible_ssh_user=ec2-user 
+172.31.20.112 ansible_ssh_user='ec2-user' 
 
 [J-LB]
-172.31.23.19 ansible_ssh_user=ubuntu
+172.31.23.19 ansible_ssh_user='ubuntu'
