@@ -1,6 +1,6 @@
 ---
 - name: update web, nfs and db servers
-  hosts: webservers, nfs, db
+  hosts: J-Web1, J-Web2, J-NFS, J-DB
   remote_user: ec2-user
   become: yes
   become_user: root
@@ -12,7 +12,7 @@
    
 
 - name: update LB server
-  hosts: lb
+  hosts: J-LB
   remote_user: ubuntu
   become: yes
   become_user: root
@@ -25,3 +25,5 @@
       apt:
         name: wireshark
         state: latest
+
+        ansible-playbook -i /var/lib/jenkins/jobs/Ansible/builds/4/archive/inventory/dev.yml /var/lib/jenkins/jobs/Ansible/builds/4/archive/playbooks/common.yml
