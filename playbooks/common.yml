@@ -1,5 +1,5 @@
 ---
-- name: update web, nfs and db servers
+- name: update J-Web1, J-Web2,  J-NFS, and J-DB servers
   hosts: J-Web1, J-Web2, J-NFS, J-DB
   remote_user: ec2-user
   become: yes
@@ -11,7 +11,9 @@
         state: latest
    
 
-- name: update LB server
+   #=============================================
+
+- name: update J-LB server
   hosts: J-LB
   remote_user: ubuntu
   become: yes
@@ -25,6 +27,8 @@
       apt:
         name: wireshark
         state: latest
+
+
 
 
 
